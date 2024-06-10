@@ -152,7 +152,7 @@ class KategoriController extends Controller
      */
     public function destroy(string $id)
     {
-        $rsetKategori = Kategori::find($id);
+       // $rsetKategori = Kategori::find($id);
 
         if (DB::table('barang')->where('kategori_id', $id)->exists()){
             return redirect()->route('kategori.index')->with(['Gagal' => 'Data Gagal Dihapus!']);
